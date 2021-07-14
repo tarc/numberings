@@ -1,9 +1,9 @@
-#include <iostream>
+#include "config.hpp"
 
 namespace numberings
 {
-    inline void hello()
+    static constexpr const char* version()
     {
-        std::cout << "Hello" << std::endl;
+        return PROJECT_VER;
     }
 } // namespace numberings

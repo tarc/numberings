@@ -3,7 +3,7 @@
         {
             "name": "default",
             "conanFile": "${workspaceFolder}/conanfile.py",
-            "profile": "default",
+            "profile":"${workspaceFolder}/.infrastructure/conan_config/profiles/cppstd17",
             "installArg": "--build missing",
             "buildArg": "",
             "createUser": "tarc",

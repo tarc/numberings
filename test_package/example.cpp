@@ -1,6 +1,8 @@
+#include <iostream>
+
 #include "numberings.hpp"
 
 int main()
 {
-    numberings::hello();
+    std::cout << numberings::version() << std::endl;
 }
