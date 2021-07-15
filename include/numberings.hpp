@@ -1,3 +1,6 @@
+#ifndef NUMBERINGS_HPP
+#define NUMBERINGS_HPP
+
 #include "config.hpp"
 
 namespace numberings
@@ -19,3 +22,5 @@ namespace numberings
     };
 
 } // namespace numberings
+
+#endif // NUMBERINGS_HPP
