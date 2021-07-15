@@ -2,6 +2,8 @@
 #define NUMBERINGS_HPP
 
 #include "config.hpp"
+#include "buffer.hpp"
+#include "type_sort.hpp"
 
 namespace numberings
 {
@@ -14,12 +16,6 @@ namespace numberings
     {
         return PROJECT_VER;
     }
-
-    template<class T>
-    struct buffer
-    {
-        const char value[sizeof(T)];
-    };
 
 } // namespace numberings
 

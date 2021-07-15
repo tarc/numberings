@@ -2,6 +2,7 @@ include(GoogleTest)
 
 add_executable(
     tests
+    ${CMAKE_CURRENT_SOURCE_DIR}/type_sort.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/trivial.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/buffer.cpp)
 

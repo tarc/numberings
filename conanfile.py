@@ -8,7 +8,8 @@ class Numberings(ConanFile):
     no_copy_source = True
     generators = "cmake"
     exports_sources = "include/*", "config.hpp.in",  "CMakeLists.txt", "tests/*"
-    requires = "gtest/1.10.0"
+    requires = "gtest/1.10.0", "boost/1.76.0"
+    default_options = "boost:header_only=True"
 
     def configure(self):
         tools.check_min_cppstd(self, "17")
