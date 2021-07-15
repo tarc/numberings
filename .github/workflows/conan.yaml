@@ -2,7 +2,7 @@ name: conan
 
 on:
   push:
-    branches: [main, develop]
+    branches: [master, develop]
 
 jobs:
   build:
@@ -13,14 +13,17 @@ jobs:
         os: [windows-latest, ubuntu-latest, macos-latest]
 
     steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
     - name: Install Conan
       id: conan
       uses: turtlebrowser/get-conan@main
 
-    - name: Conan version
+    - name: Print Conan version
       run: echo "${{ steps.conan.outputs.version }}"
 
-    - name: Compilation
+    - name: Compile
       run: |
         conan install conanfile.py --profile=.infrastructure/profiles/default --build missing --install-folder build/default
         conan build conanfile.py  --build-folder build/default
