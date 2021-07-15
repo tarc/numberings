@@ -4,5 +4,5 @@
 
 int main()
 {
-    std::cout << numberings::version() << std::endl;
+    std::cout << numberings::name() << " v" << numberings::version() << std::endl;
 }
