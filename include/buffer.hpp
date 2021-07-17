@@ -3,8 +3,7 @@
 
 namespace numberings
 {
-    template <class T>
-    struct buffer
+    template <class T> struct buffer
     {
         const char value[sizeof(T)];
     };
