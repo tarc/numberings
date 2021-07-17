@@ -25,5 +25,5 @@ jobs:
 
     - name: Compile
       run: |
-        conan install conanfile.py --profile=.infrastructure/profiles/default --build missing --install-folder build/default
+        conan install conanfile.py --profile=.conan/profiles/default --build missing --install-folder build/default
         conan build conanfile.py  --build-folder build/default

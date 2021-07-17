@@ -3,7 +3,7 @@
         {
             "name": "default",
             "conanFile": "${workspaceFolder}/conanfile.py",
-            "profile":"${workspaceFolder}/.infrastructure/profiles/default",
+            "profile":"${workspaceFolder}/.conan/profiles/default",
             "installArg": "--build missing",
             "buildArg": "",
             "createUser": "tarc",
