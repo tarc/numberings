@@ -1,9 +1,9 @@
 {
     "profiles": [
         {
-            "name": "default",
+            "name": "default-profile",
             "conanFile": "${workspaceFolder}/conanfile.py",
-            "profile":"${workspaceFolder}/.conan/profiles/default",
+            "profile":"${workspaceFolder}/.conan/profiles/default-profile",
             "installArg": "--build missing",
             "buildArg": "",
             "createUser": "tarc",

@@ -1,6 +1,6 @@
 [
     {
-        "name": "default",
+        "name": "default-profile",
         "preferredGenerator": {
             "name": "Unix Makefiles"
         }
