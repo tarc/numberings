@@ -1,23 +1,22 @@
-#ifndef NUMBERINGS_TYPE_ORDERING_HPP
-#define NUMBERINGS_TYPE_ORDERING_HPP
+#ifndef NUMBERINGS_TYPE_SORT_HPP
+#define NUMBERINGS_TYPE_SORT_HPP
 
 #include <boost/mpl/size_t.hpp>
 #include <boost/mpl/sort.hpp>
 #include <boost/mpl/vector.hpp>
 
+#include "detail/size_of.hpp"
+
 namespace numberings
 {
-    template <typename T> struct size_of : boost::mpl::size_t<sizeof(T)>
-    {
-    };
 
-    template <typename... Ts> struct type_sort
-    {
-        using vector = boost::mpl::vector<Ts...>;
-        using type =
-            typename boost::mpl::sort<vector, boost::mpl::less<size_of<boost::mpl::_1>, size_of<boost::mpl::_2>>>::type;
-    };
+template <typename... Ts> struct type_sort
+{
+    using vector = boost::mpl::vector<Ts...>;
+    using type =
+        typename boost::mpl::sort<vector, boost::mpl::less<detail::size_of<boost::mpl::_1>, detail::size_of<boost::mpl::_2>>>::type;
+};
 
 } // namespace numberings
 
-#endif // NUMBERINGS_TYPE_ORDERING_HPP
+#endif // NUMBERINGS_TYPE_SORT_HPP

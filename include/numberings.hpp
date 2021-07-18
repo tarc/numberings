@@ -7,15 +7,16 @@
 
 namespace numberings
 {
-    static constexpr const char *name()
-    {
-        return PROJECT_NAME;
-    }
 
-    static constexpr const char *version()
-    {
-        return PROJECT_VER;
-    }
+static constexpr const char *name()
+{
+    return PROJECT_NAME;
+}
+
+static constexpr const char *version()
+{
+    return PROJECT_VER;
+}
 
 } // namespace numberings
 
